@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WallHackJack — Jeff Franzen's World of Warcraft Legend</title>
+<meta name="description" content="WallHackJack — the Gnome Rogue of Jeff Franzen. Character sheet, armory, raid progression, and the player behind the name.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23141210'/%3E%3Cpath d='M6 8l4 16 4-10 4 10 4-16' stroke='%23e8b64c' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════════ HERO ══════════════ -->
+<header class="hero">
+  <canvas id="embers" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <p class="hero-kicker">The Legend of</p>
+    <h1 class="hero-name">WallHack<span class="hero-name-jack">Jack</span></h1>
+    <p class="hero-title">&ldquo;He Doesn&rsquo;t Cheat. Walls Just Respect Him.&rdquo;</p>
+    <p class="hero-byline">A Gnome Rogue &middot; Played by <strong>Jeff Franzen</strong></p>
+  </div>
+  <a class="scroll-cue" href="#sheet" aria-label="Scroll to character sheet">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</header>
+
+<main>
+
+<!-- ══════════════ CHARACTER SHEET ══════════════ -->
+<section class="section" id="sheet">
+  <h2 class="plaque"><span>Character Sheet</span></h2>
+  <div class="sheet-layout">
+    <div class="tilt-wrap">
+      <article class="char-card" id="tiltCard">
+        <div class="char-card-glare" aria-hidden="true"></div>
+        <div class="char-portrait" aria-hidden="true">
+          <!-- original stylized rogue mark -->
+          <svg viewBox="0 0 120 120" role="img" aria-label="Stylized rogue emblem: two crossed daggers behind a hooded silhouette">
+            <defs>
+              <radialGradient id="pg" cx="50%" cy="38%" r="65%">
+                <stop offset="0%" stop-color="#3c3222"/>
+                <stop offset="100%" stop-color="#17130d"/>
+              </radialGradient>
+            </defs>
+            <rect width="120" height="120" rx="10" fill="url(#pg)"/>
+            <g stroke="#e8b64c" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9">
+              <path d="M30 92 L74 34"/><path d="M90 92 L46 34"/>
+              <path d="M26 96 l8 -2 -6 -6 z" fill="#e8b64c"/>
+              <path d="M94 96 l-8 -2 6 -6 z" fill="#e8b64c"/>
+            </g>
+            <path d="M60 38 c-14 0 -22 12 -22 26 0 6 3 12 8 16 l28 0 c5 -4 8 -10 8 -16 0 -14 -8 -26 -22 -26 z" fill="#0e0c08"/>
+            <path d="M60 44 c-10 0 -16 9 -16 20 0 4 2 8 5 11 l22 0 c3 -3 5 -7 5 -11 0 -11 -6 -20 -16 -20 z" fill="#221b10"/>
+            <g fill="#c88ef0"><circle cx="52" cy="62" r="2.6"/><circle cx="68" cy="62" r="2.6"/></g>
+          </svg>
+        </div>
+        <h3 class="char-name">WallHackJack</h3>
+        <p class="char-line">Level 80 Gnome Rogue &middot; Subtlety</p>
+        <p class="char-guild">&lt;Through the Wall&gt; &middot; Guild Master</p>
+        <dl class="char-meta">
+          <div><dt>Item Level</dt><dd>489</dd></div>
+          <div><dt>Achievement Pts</dt><dd>28,415</dd></div>
+          <div><dt>Honorable Kills</dt><dd>112,847</dd></div>
+        </dl>
+      </article>
+    </div>
+    <div class="stats">
+      <h3 class="stats-heading">Attributes</h3>
+      <div class="stat" data-fill="96"><span class="stat-label">Agility</span><span class="stat-bar"><span class="stat-fill"></span></span><span class="stat-num">9,614</span></div>
+      <div class="stat" data-fill="82"><span class="stat-label">Stamina</span><span class="stat-bar"><span class="stat-fill"></span></span><span class="stat-num">8,207</span></div>
+      <div class="stat" data-fill="74"><span class="stat-label">Critical Strike</span><span class="stat-bar"><span class="stat-fill"></span></span><span class="stat-num">38.2%</span></div>
+      <div class="stat" data-fill="68"><span class="stat-label">Mastery</span><span class="stat-bar"><span class="stat-fill"></span></span><span class="stat-num">61.4%</span></div>
+      <div class="stat" data-fill="88" data-epic><span class="stat-label">Wall Clipping</span><span class="stat-bar"><span class="stat-fill"></span></span><span class="stat-num">???</span></div>
+      <p class="stats-note">One of these attributes has never been reproduced by Blizzard quality assurance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ THE PLAYER ══════════════ -->
+<section class="section section-player">
+  <h2 class="plaque"><span>The Player</span></h2>
+  <div class="player-prose">
+    <p class="player-lede">Behind every legend is a person with excellent posture and a worn-out Shift key. This one is <strong>Jeff Franzen</strong>.</p>
+    <p>By daylight Jeff builds maps and data tools. After dark he is WallHackJack — a rogue whose reputation was earned the honest way: flawless positioning, immaculate cooldown discipline, and an uncanny habit of appearing on the other side of geometry that should have stopped him. Guildmates stopped asking how. The name stuck.</p>
+    <p>Ask him about the Karazhan chess event. Do not ask him about the Deadmines run of &rsquo;06. He knows what he did.</p>
+  </div>
+</section>
+
+<!-- ══════════════ ARMORY ══════════════ -->
+<section class="section">
+  <h2 class="plaque"><span>The Armory</span></h2>
+  <p class="section-sub">Hover a slot. Rarity is color; color is truth.</p>
+  <ul class="gear">
+    <li class="gear-slot" data-rarity="legendary"><span class="gear-name">Fangs of the Doorframe</span><span class="gear-kind">Daggers &middot; Main Hand / Off Hand</span><span class="gear-flavor">&ldquo;The wall never saw them coming. Nothing does.&rdquo;</span></li>
+    <li class="gear-slot" data-rarity="epic"><span class="gear-name">Hood of Plausible Deniability</span><span class="gear-kind">Head &middot; Leather</span><span class="gear-flavor">+120 Agility. You were never here.</span></li>
+    <li class="gear-slot" data-rarity="epic"><span class="gear-name">Shoulderpads of the Load-Bearing Beam</span><span class="gear-kind">Shoulder &middot; Leather</span><span class="gear-flavor">Structurally significant.</span></li>
+    <li class="gear-slot" data-rarity="rare"><span class="gear-name">Cloak of Rendered Distance</span><span class="gear-kind">Back</span><span class="gear-flavor">Draws aggro only within draw distance.</span></li>
+    <li class="gear-slot" data-rarity="epic"><span class="gear-name">Gloves of the Third Keystroke</span><span class="gear-kind">Hands &middot; Leather</span><span class="gear-flavor">Macro not included.</span></li>
+    <li class="gear-slot" data-rarity="uncommon"><span class="gear-name">Belt of Held Expectations</span><span class="gear-kind">Waist &middot; Leather</span><span class="gear-flavor">Keeps everything together. Mostly.</span></li>
+    <li class="gear-slot" data-rarity="rare"><span class="gear-name">Boots of Clipping Through</span><span class="gear-kind">Feet &middot; Leather</span><span class="gear-flavor">Terrain is a suggestion.</span></li>
+    <li class="gear-slot" data-rarity="legendary"><span class="gear-name">Ring of the Unrendered Corridor</span><span class="gear-kind">Finger</span><span class="gear-flavor">&ldquo;He walked where the map had not yet decided to exist.&rdquo;</span></li>
+  </ul>
+</section>
+
+<!-- ══════════════ RAID PROGRESSION ══════════════ -->
+<section class="section">
+  <h2 class="plaque"><span>Raid Progression</span></h2>
+  <ol class="timeline">
+    <li class="tl-item"><span class="tl-node" aria-hidden="true"></span><div class="tl-body"><h3>Molten Core</h3><p class="tl-era">Vanilla &middot; 2006</p><p>Forty people, one fire lord, zero voice discipline. Jack looted a single Bindings drop and has mentioned it at every guild meeting since.</p></div></li>
+    <li class="tl-item"><span class="tl-node" aria-hidden="true"></span><div class="tl-body"><h3>Karazhan</h3><p class="tl-era">The Burning Crusade &middot; 2007</p><p>Solved the chess event by refusing to play it correctly. The opera fight requested he stop stealthing through the curtain.</p></div></li>
+    <li class="tl-item"><span class="tl-node" aria-hidden="true"></span><div class="tl-body"><h3>Icecrown Citadel</h3><p class="tl-era">Wrath of the Lich King &middot; 2010</p><p>The Lich King said &ldquo;no king rules forever.&rdquo; Jack was already behind him. Nobody saw him move. Standard.</p></div></li>
+    <li class="tl-item"><span class="tl-node" aria-hidden="true"></span><div class="tl-body"><h3>Siege of Orgrimmar</h3><p class="tl-era">Mists of Pandaria &middot; 2013</p><p>Garrosh brought an Old God&rsquo;s heart. Jack brought Shadowstep and a grudge. Only one walked out through the wall.</p></div></li>
+    <li class="tl-item tl-current"><span class="tl-node" aria-hidden="true"></span><div class="tl-body"><h3>The Current Tier</h3><p class="tl-era">Now</p><p>Cutting edge, as always — in progression and in pathing. The boss room has four walls. Jack counts five exits.</p></div></li>
+  </ol>
+</section>
+
+<!-- ══════════════ FEATS ══════════════ -->
+<section class="section">
+  <h2 class="plaque"><span>Feats of Legend</span></h2>
+  <ul class="feats">
+    <li class="feat"><span class="feat-pts">50</span><div><h3>Insane in the Membrane</h3><p>Earned the reputation grind nobody sane attempts. The title checks out.</p></div></li>
+    <li class="feat"><span class="feat-pts">25</span><div><h3>The Immortal</h3><p>Full Naxxramas clear, zero deaths. The walls, for once, were on his side.</p></div></li>
+    <li class="feat"><span class="feat-pts">10</span><div><h3>Leeeeeeeeeeeeeroy!</h3><p>He was not Leeroy. He was the rogue who vanished the instant it went wrong.</p></div></li>
+    <li class="feat feat-epic"><span class="feat-pts">&#9733;</span><div><h3>Out of Bounds, In Our Hearts</h3><p>Unofficial. Awarded by the guild after he waved at them from inside a mountain.</p></div></li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer-name">WallHackJack &middot; Jeff Franzen</p>
+  <p class="footer-legal">A personal fan site. Not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. All character stats certified 100% imaginary.</p>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
